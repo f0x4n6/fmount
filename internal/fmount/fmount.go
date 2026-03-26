@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	Version = "0.5.3"
+	Version = "0.5.5"
 )
 
 func Mount(img, mnt, key string, so bool, xargs []string) (parts []string, err error) {
