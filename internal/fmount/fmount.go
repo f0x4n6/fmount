@@ -7,15 +7,15 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cuhsat/futils/pkg/hash"
-	"github.com/cuhsat/futils/pkg/sys"
-	"github.com/cuhsat/futils/pkg/zip"
+	"github.com/f0x4n6/futils/pkg/hash"
+	"github.com/f0x4n6/futils/pkg/sys"
+	"github.com/f0x4n6/futils/pkg/zip"
 
-	"github.com/cuhsat/fmount/internal/posix"
+	"github.com/f0x4n6/fmount/internal/posix"
 )
 
 const (
-	Version = "0.5.2"
+	Version = "0.5.3"
 )
 
 func Mount(img, mnt, key string, so bool, xargs []string) (parts []string, err error) {
@@ -65,7 +65,7 @@ func Mount(img, mnt, key string, so bool, xargs []string) (parts []string, err e
 		}
 
 		// if all or bootable
-		if !so || (so && sp) {
+		if !so || sp {
 
 			// create partition mount point
 			mntp, err := posix.CreateDirf(mnt, "p%d", i+1)

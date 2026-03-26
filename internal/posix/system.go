@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cuhsat/futils/pkg/sys"
+	"github.com/f0x4n6/futils/pkg/sys"
 )
 
 const (
@@ -107,7 +107,7 @@ func IsBootable(dev string) (is bool, err error) {
 		return
 	}
 
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 
 	b := make([]byte, 512)
 
@@ -139,7 +139,7 @@ func IsEncrypted(dev string) (is bool, err error) {
 		return
 	}
 
-	is = (ft[0] == "BitLocker")
+	is = ft[0] == "BitLocker"
 
 	return
 }
@@ -219,10 +219,10 @@ func RemoveDirs(dir string) (err error) {
 			continue
 		}
 
-		os.Remove(filepath.Join(dir, f.Name()))
+		_ = os.Remove(filepath.Join(dir, f.Name()))
 	}
 
-	os.Remove(dir)
+	_ = os.Remove(dir)
 
 	return nil
 }

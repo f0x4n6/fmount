@@ -39,9 +39,9 @@ import (
 	"flag"
 	"io"
 
-	"github.com/cuhsat/futils/pkg/sys"
+	"github.com/f0x4n6/futils/pkg/sys"
 
-	"github.com/cuhsat/fmount/internal/fmount"
+	"github.com/f0x4n6/fmount/internal/fmount"
 )
 
 func main() {

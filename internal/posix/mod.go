@@ -3,10 +3,10 @@ package posix
 import (
 	"strings"
 
-	"github.com/cuhsat/futils/pkg/sys"
+	"github.com/f0x4n6/futils/pkg/sys"
 )
 
-func ModList(mod string) (ls []string, err error) {
+func ModList(_ string) (ls []string, err error) {
 	out, err := sys.StdCall("lsmod")
 
 	if err != nil {

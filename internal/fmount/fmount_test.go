@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cuhsat/fmount/internal/posix"
-	"github.com/cuhsat/futils/pkg/sys"
-	"github.com/cuhsat/futils/pkg/zip"
+	"github.com/f0x4n6/fmount/internal/posix"
+	"github.com/f0x4n6/futils/pkg/sys"
+	"github.com/f0x4n6/futils/pkg/zip"
 )
 
 func TestMain(m *testing.M) {
@@ -65,13 +65,13 @@ func TestMount(t *testing.T) {
 				t.Fatal("partition count differs")
 			}
 
-			sys := filepath.Join(mnt, "p1")
+			p1 := filepath.Join(mnt, "p1")
 
-			if p[0] != sys {
+			if p[0] != p1 {
 				t.Fatal("mount point does not exist")
 			}
 
-			dir, _ := os.ReadDir(sys)
+			dir, _ := os.ReadDir(p1)
 
 			if len(dir) == 0 {
 				t.Fatal("mount point is empty")
