@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/f0x4n6/fmount/internal/posix"
-	"github.com/f0x4n6/futils/pkg/sys"
-	"github.com/f0x4n6/futils/pkg/zip"
+	"go.foxforensics.dev/fmount/internal/posix"
+	"go.foxforensics.dev/futils/pkg/sys"
+	"go.foxforensics.dev/futils/pkg/zip"
 )
 
 func TestMain(m *testing.M) {

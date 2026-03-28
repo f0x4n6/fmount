@@ -1,5 +1,5 @@
-module github.com/f0x4n6/fmount
+module go.foxforensics.dev/fmount
 
 go 1.26
 
-require github.com/f0x4n6/futils v0.1.6 // indirect
+require go.foxforensics.dev/futils v0.1.7

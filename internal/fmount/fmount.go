@@ -7,15 +7,15 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/f0x4n6/futils/pkg/hash"
-	"github.com/f0x4n6/futils/pkg/sys"
-	"github.com/f0x4n6/futils/pkg/zip"
+	"go.foxforensics.dev/futils/pkg/hash"
+	"go.foxforensics.dev/futils/pkg/sys"
+	"go.foxforensics.dev/futils/pkg/zip"
 
-	"github.com/f0x4n6/fmount/internal/posix"
+	"go.foxforensics.dev/fmount/internal/posix"
 )
 
 const (
-	Version = "0.5.5"
+	Version = "0.5.6"
 )
 
 func Mount(img, mnt, key string, so bool, xargs []string) (parts []string, err error) {

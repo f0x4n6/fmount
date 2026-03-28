@@ -1,7 +1,7 @@
 package posix
 
 import (
-	"github.com/f0x4n6/futils/pkg/sys"
+	"go.foxforensics.dev/futils/pkg/sys"
 )
 
 func UmountDir(dir string) (err error) {

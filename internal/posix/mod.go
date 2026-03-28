@@ -3,7 +3,7 @@ package posix
 import (
 	"strings"
 
-	"github.com/f0x4n6/futils/pkg/sys"
+	"go.foxforensics.dev/futils/pkg/sys"
 )
 
 func ModList(_ string) (ls []string, err error) {

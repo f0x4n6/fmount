@@ -1,12 +1,8 @@
 # fmount
-[![Go Reference](https://pkg.go.dev/badge/github.com/f0x4n6/fmount.svg)](https://pkg.go.dev/github.com/f0x4n6/fmount)
-[![Go Report Card](https://goreportcard.com/badge/github.com/f0x4n6/fmount?style=flat-square)](https://goreportcard.com/report/github.com/f0x4n6/fmount)
-[![Release](https://img.shields.io/github/release/f0x4n6/fmount.svg?style=flat-square)](https://github.com/f0x4n6/fmount/releases/latest)
-
 Mount various disk images for forensic read-only processing.
 
 ```console
-go install github.com/f0x4n6/fmount@latest
+go install go.foxforensics.dev/fmount@latest
 ```
 
 ## Usage
